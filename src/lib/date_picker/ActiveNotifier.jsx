@@ -7,6 +7,7 @@ class ActiveNotifier extends React.Component {
     return (
       <div className="activeNotifier" id={id}>
         {text} <span className="dot" style={style} />
+          {errorMessage && <div className="errorMessage">{errorMessage}</div>}
       </div>
     );
   }
@@ -48,5 +49,6 @@ ActiveNotifier.propTypes = {
   smartMode: PropTypes.bool,
   style: PropTypes.object,
   local: PropTypes.object,
+  errorMessage: PropTypes.string,
 };
 export default ActiveNotifier;
